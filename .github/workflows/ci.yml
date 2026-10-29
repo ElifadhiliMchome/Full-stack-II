@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Java
@@ -20,5 +20,5 @@ jobs:
           java-version: '17'
           cache: maven
 
-      - name: Run tests
+      - name: Build and test
         run: chmod +x mvnw && ./mvnw clean test
